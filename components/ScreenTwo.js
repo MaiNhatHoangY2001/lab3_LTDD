@@ -1,24 +1,23 @@
 import { Text, StyleSheet, Image, View, TouchableOpacity } from 'react-native';
+import { TextInput } from 'react-native-paper';
 
-export default function ScreenOne() {
+export default function ScreenTwo() {
 	return (
 		<>
 			<View style={styles.circle}>
-				<Image source={require('../assets/circle.png')} />
+				<Image source={require('../assets/lock.png')} />
 			</View>
 			<View style={styles.titles}>
-				<Text style={styles.title}>GROW YOUR BUSINESS</Text>
-				<Text style={styles.description}>We will help you to grow your business using online server</Text>
+				<Text style={styles.title}>FORGET PASSWORD</Text>
+				<Text style={styles.description}>Provide your account’s email for which you want to reset your password</Text>
 			</View>
-			<View style={styles.buttons}>
+
+			<View style={styles.center}>
+				<TextInput placeholder="Email" style={styles.txtEmail} />
 				<TouchableOpacity style={styles.button}>
-					<Text style={styles.txtButton}>LOGIN</Text>
-				</TouchableOpacity>
-				<TouchableOpacity style={styles.button}>
-					<Text style={styles.txtButton}>SIGN UP</Text>
+					<Text style={styles.txtButton}>NEXT</Text>
 				</TouchableOpacity>
 			</View>
-			<Text style={styles.bottom}>HOW WE WORK?</Text>
 		</>
 	);
 }
@@ -33,8 +32,8 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		fontWeight: 'bold',
-		marginTop: 20,
-		fontSize: 20,
+		marginTop: 30,
+		fontSize: 30,
 	},
 	description: {
 		fontWeight: 'bold',
@@ -43,19 +42,19 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		margin: 20,
 	},
-	buttons: {
-		display: 'flex',
-		flexDirection: 'row',
-		justifyContent: 'space-evenly',
+	center: {
+		margin: 40,
 	},
 	button: {
 		backgroundColor: '#E3C000',
 		padding: 15,
-		paddingLeft: 20,
-		paddingRight: 20,
+		paddingLeft: 90,
+		paddingRight: 90,
 	},
 	txtButton: {
 		fontWeight: 'bold',
+		fontSize: 20,
+		textAlign: 'center',
 	},
 	bottom: {
 		fontWeight: 'bold',
@@ -63,5 +62,8 @@ const styles = StyleSheet.create({
 		fontSize: 25,
 		textAlign: 'center',
 		margin: 20,
+	},
+	txtEmail: {
+		marginBottom: 30,
 	},
 });
