@@ -1,5 +1,12 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, ImageBackground } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  ImageBackground,
+  Button,
+  ScrollView,
+} from 'react-native';
 import Constants from 'expo-constants';
 
 // You can import from local files
@@ -18,10 +25,12 @@ export default function App() {
     return background.backScreen1;
   };
 
-
   return (
     <ImageBackground style={styles.container} source={getBackground()}>
-      <ScreenOne />
+      <ScrollView>
+        <ScreenOne />
+        <Button style={{ marginTop: 50 }} title="Screen 1" />
+      </ScrollView>
     </ImageBackground>
   );
 }

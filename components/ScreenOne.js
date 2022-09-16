@@ -7,13 +7,12 @@ import {
   View,
   TouchableOpacity,
   Button,
-  ImageBackground
+  ImageBackground,
 } from 'react-native';
 
 export default function ScreenOne() {
   return (
-      
-    <ScrollView >
+    <>
       <View style={styles.circle}>
         <Image source={require('../assets/circle.png')} />
       </View>
@@ -32,8 +31,7 @@ export default function ScreenOne() {
         </TouchableOpacity>
       </View>
       <Text style={styles.bottom}>HOW WE WORK?</Text>
-    </ScrollView>
-
+    </>
   );
 }
 
